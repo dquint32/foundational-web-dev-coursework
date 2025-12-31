@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*
+    New Perspectives on HTML5 and CSS3, 8th Edition
+    Tutorial 6
+    Tutorial Case
+
+    Columns Style Sheet
+    Author: David Quintana
+    Date: 10/06/2025
+
+    Filename:           dlr_columns.css
+
+*/
+
+
+
+/* Column Styles */
+@media only screen and (min-width: 641px) {
+    article {
+        column-count: 2;
+        column-gap: 30px;
+        column-rule: 2px solid gray;
+        /* Setting minimum lines for content after a break (widows) */
+        widows: 3;
+        /* Setting minimum lines for content before a break (orphans) */
+        orphans: 3;
+    }
+
+    /* Column Break Styles: Prevents an h2 from starting a new column alone */
+    article h2 {
+        break-before: avoid-column;
+    }
+
+    /* Span the main article heading across all columns */
+    article h1:first-of-type {
+        column-span: all;
+    }
+}
