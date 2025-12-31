@@ -382,7 +382,11 @@ footer.box:hover {
    =========================================== */
 @media (max-width: 768px) {
     body {
-        padding: 20px 15px;
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 0 10px;
     }
 
     .header {
@@ -390,31 +394,71 @@ footer.box:hover {
         text-align: center;
         gap: 25px;
         padding: 25px 20px;
+        align-items: center;
     }
 
     .header-left {
         flex-direction: column;
         gap: 18px;
         width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .course-info {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .course-info h1 {
         font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .course-info p {
+        text-align: center;
     }
 
     .header-right {
         width: 100%;
         border-top: 1px solid var(--border-color);
         padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .logo {
         height: 55px;
+        margin: 0 auto;
     }
 
     .selfie {
         width: 75px;
         height: 75px;
+        margin: 0 auto;
+    }
+
+    .student-name {
+        text-align: center;
+        width: 100%;
+    }
+
+    .email {
+        text-align: center;
+        width: 100%;
     }
 
     ul {
@@ -422,21 +466,44 @@ footer.box:hover {
     }
 
     .box {
-        padding: 22px 24px;
+        padding: 22px 20px;
     }
 
     h2 {
         font-size: 1.35rem;
+        text-align: center;
+    }
+
+    h2::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 15px 5px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+
+    .header {
+        padding: 20px 15px;
+    }
+
     .course-info h1 {
         font-size: 1.4rem;
     }
 
     .course-info p {
         font-size: 0.85rem;
+    }
+
+    .selfie {
+        width: 70px;
+        height: 70px;
     }
 
     h2 {
@@ -446,5 +513,9 @@ footer.box:hover {
     li a {
         font-size: 0.9rem;
         padding: 12px 16px;
+    }
+
+    .box {
+        padding: 18px 16px;
     }
 }
