@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Tutorial Case
+
+   Visual Effects Style Sheet for Photo Page at Tree and Book
+   Author: David Quintana
+   Date: September 23, 2025
+
+   Filename: tb_visual2.css
+*/
+
+/* ----- Transformation Styles ----- */
+article {
+   perspective: 600px;
+}
+
+/* Container layout for figures */
+.figure-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2em;
+}
+
+.figures-bottom-row {
+   display: flex;
+   justify-content: center;
+   gap: 3em;
+   margin-top: 1.8em;
+}
+
+/* Each figure box styling for appearance and filter */
+#figure1 {
+   filter: sepia(0.8);
+   -webkit-filter: sepia(0.8);
+   transform: rotateX(30deg) translateZ(50px);
+   box-shadow: rgb(51, 51, 51) 0px 10px 25px;
+   width: 380px;
+   text-align: center;
+}
+
+#figure2 {
+   filter: grayscale(1);
+   -webkit-filter: grayscale(1);
+   transform: rotateZ(-18deg) rotateY(-15deg) scale(1.03);
+   box-shadow: rgb(51, 51, 51) 0px 8px 18px;
+   width: 260px;
+}
+
+#figure3 {
+   filter: saturate(1.5) contrast(1.2);
+   -webkit-filter: saturate(1.5) contrast(1.2);
+   transform: rotateZ(13deg) rotateY(10deg) scale(1.02);
+   box-shadow: rgb(51, 51, 51) 0px 8px 20px;
+   width: 260px;
+}
+
+/* Caption style per example */
+figure figcaption {
+   font-family: Georgia, serif;
+   font-size: 1.08em;
+   color: #444;
+   margin-top: 0.7em;
+   text-align: center;
+   font-style: italic;
+   background: none;
+}
+
+/* Base figure box reset */
+figure {
+   margin: 0;
+   padding: 0;
+   background: none;
+   border: none;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 900px) {
+   .figure-container {
+      gap: 1.5em;
+   }
+
+   .figures-bottom-row {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.8em;
+   }
+
+   #figure1, #figure2, #figure3 {
+      width: 90%;
+      max-width: 340px;
+      transform: none !important;
+      box-shadow: none !important;
+      filter: none !important;
+   }
+}
