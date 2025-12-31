@@ -382,7 +382,7 @@ footer.box:hover {
    =========================================== */
 @media (max-width: 768px) {
     body {
-        padding: 20px 10px;
+        padding: 15px 10px;
     }
 
     .container {
@@ -395,6 +395,14 @@ footer.box:hover {
         gap: 25px;
         padding: 25px 20px;
         align-items: center;
+        border: none;
+        border-radius: var(--card-radius);
+        box-shadow: none;
+        margin-bottom: 30px;
+    }
+
+    .header::before {
+        display: none;
     }
 
     .header-left {
@@ -424,8 +432,8 @@ footer.box:hover {
 
     .header-right {
         width: 100%;
-        border-top: 1px solid var(--border-color);
-        padding-top: 20px;
+        border-top: none;
+        padding-top: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -466,12 +474,15 @@ footer.box:hover {
     }
 
     .box {
-        padding: 22px 20px;
+        padding: 20px 18px;
+        border-radius: 10px;
     }
 
     h2 {
-        font-size: 1.35rem;
+        font-size: 1.4rem;
         text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 18px;
     }
 
     h2::after {
