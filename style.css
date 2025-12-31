@@ -1,0 +1,450 @@
+/* ===========================================
+   GLOBAL VARIABLES & RESET
+   =========================================== */
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text-primary: #e8e8e8;
+    --text-secondary: #a8a8a8;
+    --accent-color: #ff8c00;
+    --accent-hover: #ffa500;
+    --border-color: #2a2a2a;
+    --card-radius: 12px;
+    --transition-speed: 0.3s;
+    --shadow-glow: 0 4px 20px rgba(255, 140, 0, 0.12);
+    --shadow-glow-hover: 0 8px 30px rgba(255, 140, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================================
+   BODY & GLOBAL STYLING
+   =========================================== */
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 140, 0, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(255, 140, 0, 0.03) 0%, transparent 50%);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 30px 20px;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* ===========================================
+   CONTAINER & LAYOUT
+   =========================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===========================================
+   HEADER STYLING
+   =========================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--accent-color);
+    border-radius: var(--card-radius);
+    padding: 30px 35px;
+    margin-bottom: 45px;
+    box-shadow: var(--shadow-glow);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 0.8s ease-out 0.2s forwards;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    opacity: 0.3;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1;
+}
+
+.logo {
+    height: 65px;
+    width: auto;
+    filter: brightness(1.1) drop-shadow(0 2px 8px rgba(255, 140, 0, 0.2));
+    transition: transform var(--transition-speed) ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.course-info h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+.course-info p {
+    margin: 3px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.selfie {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+    transition: all var(--transition-speed) ease;
+}
+
+.selfie:hover {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
+}
+
+.student-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--accent-color);
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+.email {
+    margin: 0;
+}
+
+.email a {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+    position: relative;
+}
+
+.email a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.email a:hover {
+    color: var(--accent-color);
+}
+
+.email a:hover::after {
+    width: 100%;
+}
+
+/* ===========================================
+   SECTION BOXES / CARDS
+   =========================================== */
+.box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-radius);
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    
+    /* Scroll reveal setup */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.box:hover::before {
+    left: 100%;
+}
+
+/* Visible state added by JavaScript */
+.box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-glow-hover);
+}
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(255, 140, 0, 0.2);
+    letter-spacing: 0.3px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+/* ===========================================
+   LISTS & LINKS
+   =========================================== */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+}
+
+li {
+    margin: 0;
+}
+
+li a {
+    display: block;
+    padding: 14px 18px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li a::before {
+    content: '→';
+    position: absolute;
+    left: 18px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.25s ease;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+li a:hover {
+    background-color: rgba(255, 140, 0, 0.08);
+    color: var(--accent-color);
+    border-left-color: var(--accent-color);
+    padding-left: 40px;
+    box-shadow: 0 2px 12px rgba(255, 140, 0, 0.15);
+}
+
+li a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+li a:active {
+    transform: scale(0.98);
+}
+
+/* ===========================================
+   CITATION SECTION
+   =========================================== */
+.citation-section p {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.95rem;
+    border-left: 4px solid var(--accent-color);
+    padding: 18px 20px;
+    background: rgba(255, 140, 0, 0.03);
+    border-radius: 0 8px 8px 0;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+footer.box {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: none;
+    background: transparent;
+    padding: 25px;
+    box-shadow: none;
+}
+
+footer.box:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.signature {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.signature:hover {
+    opacity: 1;
+}
+
+/* ===========================================
+   ANIMATIONS
+   =========================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .header-left {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+    }
+
+    .course-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .header-right {
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .selfie {
+        width: 75px;
+        height: 75px;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        padding: 22px 24px;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-info h1 {
+        font-size: 1.4rem;
+    }
+
+    .course-info p {
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    li a {
+        font-size: 0.9rem;
+        padding: 12px 16px;
+    }
+}
