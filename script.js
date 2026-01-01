@@ -2,6 +2,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ===========================================
+    // LANGUAGE TOGGLE LOGIC
+    // ===========================================
+    const langToggle = document.getElementById('language-toggle');
+    const body = document.body;
+    
+    // Check local storage for saved preference
+    const savedLang = localStorage.getItem('language');
+    
+    if (savedLang === 'es') {
+        body.classList.remove('lang-en-active');
+        body.classList.add('lang-es-active');
+        langToggle.checked = true; // Set switch to on
+    } else {
+        // Default to English
+        body.classList.add('lang-en-active');
+        body.classList.remove('lang-es-active');
+        langToggle.checked = false; // Set switch to off
+    }
+
+    // Listen for switch changes
+    langToggle.addEventListener('change', () => {
+        if (langToggle.checked) {
+            // Switch to Spanish
+            body.classList.remove('lang-en-active');
+            body.classList.add('lang-es-active');
+            localStorage.setItem('language', 'es');
+            console.log('🌐 Language switched to Spanish');
+        } else {
+            // Switch to English
+            body.classList.remove('lang-es-active');
+            body.classList.add('lang-en-active');
+            localStorage.setItem('language', 'en');
+            console.log('🌐 Language switched to English');
+        }
+    });
+
+    // ===========================================
     // SCROLL REVEAL ANIMATION
     // ===========================================
     
@@ -136,19 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
             box.addEventListener('blur', () => {
                 box.style.outline = 'none';
             });
-        }
-    });
-
-    // ===========================================
-    // PERFORMANCE MONITORING (Optional)
-    // ===========================================
-    
-    // Log page load performance
-    window.addEventListener('load', () => {
-        if (window.performance) {
-            const perfData = window.performance.timing;
-            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-            console.log(`⚡ Page loaded in ${pageLoadTime}ms`);
         }
     });
 
