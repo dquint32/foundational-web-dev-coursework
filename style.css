@@ -116,6 +116,87 @@ body {
 .header-right {
     display: flex;
     align-items: center;
+    gap: 25px; /* Added gap to separate toggle and profile */
+}
+
+/* Toggle Switch Styles */
+.lang-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* LANGUAGE VISIBILITY LOGIC */
+/* If body has class 'lang-en-active', hide Spanish */
+body.lang-en-active .lang-es {
+    display: none !important;
+}
+
+/* If body has class 'lang-es-active', hide English */
+body.lang-es-active .lang-en {
+    display: none !important;
 }
 
 .profile {
@@ -435,8 +516,10 @@ footer.box:hover {
         border-top: none;
         padding-top: 15px;
         display: flex;
+        flex-direction: column-reverse; /* Put toggle below profile on mobile */
         justify-content: center;
         align-items: center;
+        gap: 20px;
     }
 
     .profile {
