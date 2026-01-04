@@ -10,431 +10,225 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Assignments CIS 3030 - David Quintana</title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="lang-en-active">
+<body>
     <div class="container">
+        <!-- Header Section -->
         <header class="header box" role="banner">
             <div class="header-left">
                 <img src="msudenver_logo.png" alt="Metropolitan State University of Denver Logo" class="logo" loading="eager">
                 <div class="course-info">
-                    <h1>
-                        <span class="lang-en">Assignments CIS 3030</span>
-                        <span class="lang-es">Tareas CIS 3030</span>
-                    </h1>
-                    <p>
-                        <strong><span class="lang-en">Professor:</span><span class="lang-es">Profesor:</span></strong> Janos Fustos
-                    </p>
-                    <p>
-                        <span class="lang-en">Business Web Page Development</span>
-                        <span class="lang-es">Desarrollo de Páginas Web de Negocios</span>
-                    </p>
-                    <p>CIS-3030-001 | Fall 2025 | CRN 50761</p>
+                    <h1>Assignments CIS 3030</h1>
+                    <dl>
+                        <dt>Course:</dt>
+                        <dd>Business Web Page Development</dd>
+                        
+                        <dt>Professor:</dt>
+                        <dd>Janos Fustos</dd>
+                        
+                        <dt>Section:</dt>
+                        <dd>CIS-3030-001 | Fall 2025</dd>
+                        
+                        <dt>CRN:</dt>
+                        <dd>50761</dd>
+                        
+                        <dt>Student:</dt>
+                        <dd>David Quintana</dd>
+                        
+                        <dt>Phone:</dt>
+                        <dd><a href="tel:+13035004122">(303) 500-4122</a></dd>
+                        
+                        <dt>Portfolio:</dt>
+                        <dd><a href="https://davidquintana.dev" target="_blank" rel="noopener noreferrer">davidquintana.dev</a></dd>
+                        
+                        <dt>GitHub:</dt>
+                        <dd><a href="https://github.com/dquint32" target="_blank" rel="noopener noreferrer">@dquint32</a></dd>
+                        
+                        <dt>Email:</dt>
+                        <dd><a href="mailto:placasfirmas.david@gmail.com">placasfirmas.david@gmail.com</a></dd>
+                        
+                        <dt>Language Preference:</dt>
+                        <dd>
+                            <button id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
+                            <span aria-hidden="true">|</span>
+                            <button id="lang-es" class="lang-btn" aria-pressed="false"><span lang="es">ES</span></button>
+                        </dd>
+                    </dl>
                 </div>
             </div>
             <div class="header-right">
-                <div class="lang-switch-wrapper">
-                    <span class="lang-label">EN</span>
-                    <label class="switch">
-                        <input type="checkbox" id="language-toggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="lang-label">ES</span>
-                </div>
-
                 <div class="profile">
                     <img src="selfie_davidq.jpg" alt="David Quintana Profile Photo" class="selfie" loading="eager">
-                    <p class="student-name">David Quintana</p>
-                    <p class="email"><a href="mailto:dquint32@msudenver.edu" aria-label="Email David Quintana">dquint32@msudenver.edu</a></p>
                 </div>
             </div>
         </header>
 
+        <!-- Main Content -->
         <main role="main">
-            <section class="box" aria-labelledby="purpose">
-                <h2 id="purpose">
-                    <span class="lang-en">Purpose of This Site</span>
-                    <span class="lang-es">Propósito del Sitio</span>
-                </h2>
-                <div class="lang-en">
-                    <p>This site documents the full set of projects completed for CIS‑3030: Business Web Page Development at MSU Denver. It serves as a technical archive demonstrating my foundational training in:</p>
-                    <p>Semantic HTML5, modern CSS (Grid, Flexbox, responsive design), multimedia integration, JavaScript fundamentals (arrays, loops, and conditional logic), and accessibility and standards‑based development.</p>
-                    <p>Although my professional portfolio highlights client‑ready, real‑world projects, this archive provides transparency into the academic foundations that support my work as a bilingual web developer.</p>
-                </div>
-                <div class="lang-es">
-                    <p>Este sitio documenta el conjunto completo de proyectos realizados para CIS‑3030: Desarrollo de Páginas Web de Negocios en MSU Denver. Sirve como un archivo técnico que demuestra mi formación fundamental en:</p>
-                    <p>HTML5 semántico, CSS moderno (Grid, Flexbox, diseño adaptable), integración multimedia, fundamentos de JavaScript (arrays, bucles y lógica condicional), y desarrollo basado en estándares y accesibilidad.</p>
-                    <p>Aunque mi portafolio profesional destaca proyectos reales listos para clientes, este archivo ofrece transparencia sobre los fundamentos académicos que respaldan mi trabajo como desarrollador web bilingüe.</p>
-                </div>
-            </section>
-
-            <section class="box" aria-labelledby="foundational-intro">
-                <h2 id="foundational-intro">
-                    <span class="lang-en">Foundational Web Development Projects (MSU Denver)</span>
-                    <span class="lang-es">Proyectos Fundamentales de Desarrollo Web (MSU Denver)</span>
-                </h2>
-                <div class="lang-en">
-                    <p>The following collection represents the semester-long progression through the <em>New Perspectives on HTML5 and CSS: Comprehensive</em> curriculum. These projects were developed to master specific web standards and technical competencies, evolving from static markup to dynamic, interactive applications.</p>
-                    <p>Each tutorial block below corresponds to a textbook chapter, demonstrating proficiency in distinct areas such as CSS Grid/Flexbox layouts, mobile-first design strategies, data table configuration, accessible form validation, and client-side scripting with JavaScript.</p>
-                </div>
-                <div class="lang-es">
-                    <p>La siguiente colección representa el progreso semestral a través del plan de estudios de <em>New Perspectives on HTML5 and CSS: Comprehensive</em>. Estos proyectos se desarrollaron para dominar estándares web específicos y competencias técnicas, evolucionando desde el marcado estático hasta aplicaciones dinámicas e interactivas.</p>
-                    <p>Cada bloque de tutoriales a continuación corresponde a un capítulo del libro de texto, demostrando competencia en áreas distintas como diseños CSS Grid/Flexbox, estrategias de diseño mobile-first, configuración de tablas de datos, validación de formularios accesibles y scripts del lado del cliente con JavaScript.</p>
-                </div>
-            </section>
-
-            <section class="box" aria-labelledby="tutorial1">
-                <h2 id="tutorial1">
-                    <span class="lang-en">Tutorial 1 — Getting Started with HTML5</span>
-                    <span class="lang-es">Tutorial 1 — Introducción a HTML5</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">HTML structure, semantic elements, lists, links, metadata.</span>
-                    <span class="lang-es">Estructura HTML, elementos semánticos, listas, enlaces, metadatos.</span>
-                </p>
-                <ul role="list">
-                    <li><a href="MODULE 2/Tutorial/ct_start.html">
-                        <span class="lang-en">Tutorial: HTML Structure & Semantic Markup</span>
-                        <span class="lang-es">Tutorial: Estructura HTML y Marcado Semántico</span>
-                    </a></li>
-                    <li><a href="MODULE 2/Tutorial/ct_menu.html">
-                        <span class="lang-en">Review: Navigation, Lists, and Linking Practice</span>
-                        <span class="lang-es">Repaso: Navegación, Listas y Práctica de Enlaces</span>
-                    </a></li>
-                    <li><a href="MODULE 2/Tutorial/ct_reviews.html">
-                        <span class="lang-en">Case: Multi‑Page Semantic Site Structure</span>
-                        <span class="lang-es">Caso: Estructura de Sitio Semántico de Varias Páginas</span>
-                    </a></li>
+            <!-- Purpose Section -->
+            <section id="purpose" class="box">
+                <h2 data-i18n="purpose-heading">Project Mission &amp; Purpose</h2>
+                <p data-i18n="purpose-intro">This digital archive documents my technical progression through the academic and technical foundations of web development. For detailed inquiries or professional services, please visit <a href="https://davidquintana.dev" target="_blank" rel="noopener noreferrer">davidquintana.dev</a>. This site serves as a transparent record of my proficiency in:</p>
+                <ul>
+                    <li><strong data-i18n="skill-html">Semantic HTML5:</strong> <span data-i18n="skill-html-desc">Building meaningful, accessible document structures.</span></li>
+                    <li><strong data-i18n="skill-css">Modern CSS:</strong> <span data-i18n="skill-css-desc">Implementing responsive design via Flexbox, CSS Grid, and mobile-first strategies.</span></li>
+                    <li><strong data-i18n="skill-js">JavaScript Fundamentals:</strong> <span data-i18n="skill-js-desc">Developing logic through arrays, loops, and conditional statements.</span></li>
+                    <li><strong data-i18n="skill-standards">Web Standards:</strong> <span data-i18n="skill-standards-desc">Ensuring cross-browser compatibility and ADA accessibility compliance.</span></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial2">
-                <h2 id="tutorial2">
-                    <span class="lang-en">Tutorial 2 — Getting Started with CSS</span>
-                    <span class="lang-es">Tutorial 2 — Introducción a CSS</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Selectors, colors, typography, inheritance, specificity.</span>
-                    <span class="lang-es">Selectores, colores, tipografía, herencia, especificidad.</span>
-                </p>
+            <!-- Technical Project Gallery Introduction -->
+            <section class="box">
+                <h2 data-i18n="gallery-heading">Technical Project Gallery</h2>
+                <p data-i18n="gallery-intro">The following modules represent a semester-long deep dive into the <em>New Perspectives on HTML5 and CSS</em> curriculum. Each project demonstrates a shift from static markup to complex, interactive applications.</p>
+            </section>
+
+            <!-- Tutorial 1: Core HTML5 Fundamentals -->
+            <section class="box">
+                <h2 data-i18n="tutorial-1-heading">Tutorial 1: Core HTML5 Fundamentals</h2>
                 <ul role="list">
-                    <li><a href="MODULE 2/Tutorial/ct_start.html">
-                        <span class="lang-en">Tutorial: External Style Sheets & Basic CSS Styling</span>
-                        <span class="lang-es">Tutorial: Hojas de Estilo Externas y Estilo CSS Básico</span>
-                    </a></li>
-                    <li><a href="MODULE 2/Review Assignment 1/mp_index.html">
-                        <span class="lang-en">Review: Typography & Page Layout Practice</span>
-                        <span class="lang-es">Repaso: Tipografía y Práctica de Diseño de Página</span>
-                    </a></li>
-                    <li><a href="MODULE 2/Case Assignment 1/jtc_index.html">
-                        <span class="lang-en">Case: Applying CSS to a Multi‑Page Website</span>
-                        <span class="lang-es">Caso: Aplicación de CSS a un Sitio Web de Varias Páginas</span>
-                    </a></li>
+                    <li><a href="MODULE 2/Tutorial/ct_start.html" data-i18n="tutorial-1-link-1">Curbside Thai Challenge: Implemented foundational HTML5 structure and semantic markup for a mobile food vendor website.</a></li>
+                    <li><a href="MODULE 2/Tutorial/ct_menu.html" data-i18n="tutorial-1-link-2">Menu: Curbside Thai Menu</a></li>
+                    <li><a href="MODULE 2/Tutorial/ct_reviews.html" data-i18n="tutorial-1-link-3">Reviews: Curbside Thai Reviews</a></li>
+                </ul>
+            </section>
+
+            <!-- Tutorial 2: Core CSS Foundations -->
+            <section class="box">
+                <h2 data-i18n="tutorial-2-heading">Tutorial 2: Core CSS Foundations</h2>
+                <ul role="list">
+                    <li><a href="MODULE 3/tutorial/tss_home.html" data-i18n="tutorial-2-link-1">Tri &amp; Succeed Sports Layout: Created a multi-page site using external CSS to control global typography and page regions.</a></li>
+                    <li><a href="MODULE 3/review/tss_coach.html" data-i18n="tutorial-2-link-2">TSS Coaches Page: Formatted navigation menus with dynamic hover effects and integrated custom web fonts.</a></li>
+                    <li><a href="MODULE 3/case2/cw_class.html" data-i18n="tutorial-2-link-3">Civil War History Site: Applied float-based layouts and dual navigation systems for a complex historical archive.</a></li>
                 </ul>
             </section>
             
-            <section class="box" aria-labelledby="tutorial3">
-                <h2 id="tutorial3">
-                    <span class="lang-en">Tutorial 3 — Designing a Page Layout</span>
-                    <span class="lang-es">Tutorial 3 — Diseño de Estructura de Página</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Floats, grids, positioning, responsive layout foundations.</span>
-                    <span class="lang-es">Floats, grids, posicionamiento, fundamentos de diseño adaptable.</span>
-                </p>
+            <!-- Tutorial 3: Designing a Page Layout -->
+            <section class="box">
+                <h2 data-i18n="tutorial-3-heading">Tutorial 3: Designing a Page Layout</h2>
                 <ul role="list">
-                    <li><a href="MODULE 3/tutorial/tss_home.html">
-                        <span class="lang-en">Tutorial: Float‑Based Page Layout</span>
-                        <span class="lang-es">Tutorial: Diseño de Página Basado en Flotantes</span>
-                    </a></li>
-                    <li><a href="MODULE 3/review/tss_coach.html">
-                        <span class="lang-en">Review: CSS Grid Layout & Responsive Columns</span>
-                        <span class="lang-es">Repaso: Diseño de Cuadrícula CSS y Columnas Adaptables</span>
-                    </a></li>
-                    <li><a href="MODULE 3/case2/cw_class.html">
-                        <span class="lang-en">Case: Multi‑Column Historical Content Layout</span>
-                        <span class="lang-es">Caso: Diseño de Contenido Histórico de Múltiples Columnas</span>
-                    </a></li>
+                    <li><a href="MODULE 4/tutorial/pc_home.html" data-i18n="tutorial-3-link-1">Pandaisia Chocolates: Implemented multi-column layouts using percentage-based widths and absolute positioning.</a></li>
+                    <li><a href="MODULE 4/review/pc_specials.html" data-i18n="tutorial-3-link-2">Pandaisia Monthly Specials: Engineered a grid-based product gallery and a scrollable awards sidebar.</a></li>
+                    <li><a href="MODULE 4/case1/sp_home.html" data-i18n="tutorial-3-link-3">Slate &amp; Pencil Tutoring: Developed a four-column CSS Grid layout featuring elements that span multiple rows and columns.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial4">
-                <h2 id="tutorial4">
-                    <span class="lang-en">Tutorial 4 — Graphic Design with CSS</span>
-                    <span class="lang-es">Tutorial 4 — Diseño Gráfico con CSS</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Backgrounds, borders, shadows, gradients, transformations.</span>
-                    <span class="lang-es">Fondos, bordes, sombras, degradados, transformaciones.</span>
-                </p>
+            <!-- Tutorial 4: Graphic Design with CSS -->
+            <section class="box">
+                <h2 data-i18n="tutorial-4-heading">Tutorial 4: Graphic Design with CSS</h2>
                 <ul role="list">
-                    <li><a href="MODULE 4/tutorial/pc_home.html">
-                        <span class="lang-en">Tutorial: Background Images, Borders & Visual Styling</span>
-                        <span class="lang-es">Tutorial: Imágenes de Fondo, Bordes y Estilo Visual</span>
-                    </a></li>
-                    <li><a href="MODULE 4/review/pc_specials.html">
-                        <span class="lang-en">Review: Shadows, Gradients & Decorative Effects</span>
-                        <span class="lang-es">Repaso: Sombras, Degradados y Efectos Decorativos</span>
-                    </a></li>
-                    <li><a href="MODULE 4/case1/sp_home.html">
-                        <span class="lang-en">Case: Advanced CSS Graphics & Image Maps</span>
-                        <span class="lang-es">Caso: Gráficos CSS Avanzados y Mapas de Imagen</span>
-                    </a></li>
+                    <li><a href="MODULE 6/tutorial/tb_genta.html" data-i18n="tutorial-4-link-1">The Komatsu Family: Used RGBA color values and multiple background images to create visual depth without heavy image assets.</a></li>
+                    <li><a href="MODULE 6/review/tb_kathleen.html" data-i18n="tutorial-4-link-2">The Ferris Family: Utilized the border-image property and CSS filters (sepia) to evoke a historical aesthetic.</a></li>
+                    <li><a href="MODULE 6/case2/cf_home.html" data-i18n="tutorial-4-link-3">Chupacabra Music Fest: Engineered a functional 3D rotating cube using translateZ and rotate transforms in a 3D coordinate system.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial5">
-                <h2 id="tutorial5">
-                    <span class="lang-en">Tutorial 5 — Designing for the Mobile Web</span>
-                    <span class="lang-es">Tutorial 5 — Diseño para la Web Móvil</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Media queries, responsive design, flexible layouts.</span>
-                    <span class="lang-es">Media queries, diseño adaptable, estructuras flexibles.</span>
-                </p>
+            <!-- Tutorial 5: Responsive Design and Accessibility -->
+            <section class="box">
+                <h2 data-i18n="tutorial-5-heading">Tutorial 5: Responsive Design and Accessibility</h2>
                 <ul role="list">
-                    <li><a href="#">
-                        <span class="lang-en">Tutorial: Responsive Layout Foundations</span>
-                        <span class="lang-es">Tutorial: Fundamentos de Diseño Adaptable</span>
-                    </a></li>
-                    <li><a href="#">
-                        <span class="lang-en">Review: Mobile‑First Styling Techniques</span>
-                        <span class="lang-es">Repaso: Técnicas de Estilo Mobile-First</span>
-                    </a></li>
-                    <li><a href="#">
-                        <span class="lang-en">Case: Adaptive Multi‑Device Website Layout</span>
-                        <span class="lang-es">Caso: Diseño de Sitio Web Adaptable Multi-Dispositivo</span>
-                    </a></li>
+                    <li><a href="MODULE 7/tutorial/tf_home.html" data-i18n="tutorial-5-link-1">Trusted Friends Pre-K: Implemented a mobile-first strategy and a specialized print stylesheet that optimizes typography for physical documents.</a></li>
+                    <li><a href="MODULE 7/review/tf_tips.html" data-i18n="tutorial-5-link-2">Trusted Friends Parenting Tips: Developed nested flexbox layouts and integrated the attr(href) CSS function for printed URLs.</a></li>
+                    <li><a href="MODULE 7/case2/cw_home.html" data-i18n="tutorial-5-link-3">Cauli-Wood Gallery: Swapped background images specifically for mobile users to improve outdoor readability.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial6">
-                <h2 id="tutorial6">
-                    <span class="lang-en">Tutorial 6 — Working with Tables and Columns</span>
-                    <span class="lang-es">Tutorial 6 — Trabajando con Tablas y Columnas</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Table structure, row/column groups, column layouts.</span>
-                    <span class="lang-es">Estructura de tablas, grupos de filas/columnas, diseño de columnas.</span>
-                </p>
+            <!-- Tutorial 6: Working with Tables and Columns -->
+            <section class="box">
+                <h2 data-i18n="tutorial-6-heading">Tutorial 6: Working with Tables and Columns</h2>
                 <ul role="list">
-                    <li><a href="MODULE 6/tutorial/tb_genta.html">
-                        <span class="lang-en">Tutorial: Data Tables & Table Styling with CSS</span>
-                        <span class="lang-es">Tutorial: Tablas de Datos y Estilo de Tabla con CSS</span>
-                    </a></li>
-                    <li><a href="MODULE 6/review/tb_kathleen.html">
-                        <span class="lang-en">Review: Column Groups & Responsive Table Design</span>
-                        <span class="lang-es">Repaso: Grupos de Columnas y Diseño de Tabla Adaptable</span>
-                    </a></li>
-                    <li><a href="MODULE 6/case2/cf_home.html">
-                        <span class="lang-en">Case: Multi‑Column Page Layout & Table Formatting</span>
-                        <span class="lang-es">Caso: Diseño de Página Multi-Columna y Formato de Tablas</span>
-                    </a></li>
+                    <li><a href="MODULE 8/tutorial/dlr_evenings.html" data-i18n="tutorial-6-link-1">DLR Nightly Schedule: Used &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; tags with column grouping to manage diverse broadcast data.</a></li>
+                    <li><a href="MODULE 8/review/dlr_mornings.html" data-i18n="tutorial-6-link-2">DLR Morning Schedule: Utilized the CSS Multi-column Layout Module to flow descriptive text into a readable three-column format.</a></li>
+                    <li><a href="MODULE 8/case1/mi_pricing.html" data-i18n="tutorial-6-link-3">Marlin Internet: Integrated custom @font-face rules and multi-stop linear gradients to create a high-tech pricing interface.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial7">
-                <h2 id="tutorial7">
-                    <span class="lang-en">Tutorial 7 — Designing a Web Form</span>
-                    <span class="lang-es">Tutorial 7 — Diseño de Formularios Web</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Form structure, input types, validation, accessibility.</span>
-                    <span class="lang-es">Estructura de formulario, tipos de entrada, validación, accesibilidad.</span>
-                </p>
+            <!-- Tutorial 7: Designing a Web Form -->
+            <section class="box">
+                <h2 data-i18n="tutorial-7-heading">Tutorial 7: Designing a Web Form</h2>
                 <ul role="list">
-                    <li><a href="MODULE 7/tutorial/tf_home.html">
-                        <span class="lang-en">Tutorial: Form Structure & Input Fields</span>
-                        <span class="lang-es">Tutorial: Estructura de Formulario y Campos de Entrada</span>
-                    </a></li>
-                    <li><a href="MODULE 7/review/tf_tips.html">
-                        <span class="lang-en">Review: Form Widgets & Input Controls</span>
-                        <span class="lang-es">Repaso: Widgets de Formulario y Controles de Entrada</span>
-                    </a></li>
-                    <li><a href="MODULE 7/case2/cw_home.html">
-                        <span class="lang-en">Case: Full Form with Validation & Layout</span>
-                        <span class="lang-es">Caso: Formulario Completo con Validación y Diseño</span>
-                    </a></li>
+                    <li><a href="MODULE 9/case1/cg_register.html" data-i18n="tutorial-7-link-1">ACGIP Conference Registration: Applied custom regex patterns for validation and a three-state visual feedback system using :valid and :invalid pseudo-classes.</a></li>
+                    <li><a href="MODULE 9/review/rb_build.html" data-i18n="tutorial-7-link-2">Red Ball Pizza Order Forms: Engineered a multi-page form flow with dynamic field state management based on user delivery selections.</a></li>
+                    <li><a href="MODULE 9/tutorial/rb_survey.html" data-i18n="tutorial-7-link-3">Red Ball Pizza Survey: Deployed range sliders and multi-select dropdown lists organized within semantic &lt;fieldset&gt; containers.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial8">
-                <h2 id="tutorial8">
-                    <span class="lang-en">Tutorial 8 — Enhancing a Website with Multimedia</span>
-                    <span class="lang-es">Tutorial 8 — Mejora del Sitio con Multimedia</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Audio, video, captions, transitions, animations.</span>
-                    <span class="lang-es">Audio, video, subtítulos, transiciones, animaciones.</span>
-                </p>
+            <!-- Tutorial 8: Enhancing a Website with Advanced CSS -->
+            <section class="box">
+                <h2 data-i18n="tutorial-8-heading">Tutorial 8: Enhancing a Website with Advanced CSS</h2>
                 <ul role="list">
-                    <li><a href="MODULE 8/tutorial/dlr_evenings.html">
-                        <span class="lang-en">Tutorial: Audio Integration & Media Controls</span>
-                        <span class="lang-es">Tutorial: Integración de Audio y Controles Multimedia</span>
-                    </a></li>
-                    <li><a href="MODULE 8/review/dlr_mornings.html">
-                        <span class="lang-en">Review: Video Playback, Captions & Text Tracks</span>
-                        <span class="lang-es">Repaso: Reproducción de Video, Subtítulos y Pistas de Texto</span>
-                    </a></li>
-                    <li><a href="MODULE 8/case1/mi_pricing.html">
-                        <span class="lang-en">Case: Transitions, Animations & Multimedia Layout</span>
-                        <span class="lang-es">Caso: Transiciones, Animaciones y Diseño Multimedia</span>
-                    </a></li>
+                    <li><a href="MODULE 10/case2/paa_game.html" data-i18n="tutorial-8-link-1">Frustrated Fox Game: Engineered complex sprite sheet animations using the steps() timing function and custom keyframe sequences.</a></li>
+                    <li><a href="MODULE 10/review/cp_astaire.html" data-i18n="tutorial-8-link-2">Cinema Penguin: Fred Astaire Biography: Integrated HTML5 audio/video with custom WebVTT caption styling and an infinite marquee animation.</a></li>
+                    <li><a href="MODULE 10/tutorial/cp_royal.html" data-i18n="tutorial-8-link-3">Cinema Penguin: Royal Wedding: Synchronized video playback with a 360-degree CSS rotation animation using checkbox-controlled triggers.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial9">
-                <h2 id="tutorial9">
-                    <span class="lang-en">Tutorial 9 — Getting Started with JavaScript</span>
-                    <span class="lang-es">Tutorial 9 — Introducción a JavaScript</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Variables, functions, objects, dates, math operations.</span>
-                    <span class="lang-es">Variables, funciones, objetos, fechas, operaciones matemáticas.</span>
-                </p>
+            <!-- Tutorial 9: Getting Started with JavaScript -->
+            <section class="box">
+                <h2 data-i18n="tutorial-9-heading">Tutorial 9: Getting Started with JavaScript</h2>
                 <ul role="list">
-                    <li><a href="MODULE 9/tutorial/rb_survey.html">
-                        <span class="lang-en">Tutorial: JavaScript Basics & Script Integration</span>
-                        <span class="lang-es">Tutorial: Conceptos Básicos de JavaScript e Integración de Scripts</span>
-                    </a></li>
-                    <li><a href="MODULE 9/review/rb_build.html">
-                        <span class="lang-en">Review: Functions, Math Operations & Timed Commands</span>
-                        <span class="lang-es">Repaso: Funciones, Operaciones Matemáticas y Comandos Temporizados</span>
-                    </a></li>
-                    <li><a href="MODULE 9/case1/cg_register.html">
-                        <span class="lang-en">Case: Interactive Form Logic & Calculations</span>
-                        <span class="lang-es">Caso: Lógica Interactiva de Formularios y Cálculos</span>
-                    </a></li>
+                    <li><a href="MODULE 11/case1/bc_union.html" data-i18n="tutorial-9-link-1">Bridger College Student Union: Developed a dynamic calendar using a seven-case switch statement and locale-aware date formatting.</a></li>
+                    <li><a href="MODULE 11/review/tny_july.html" data-i18n="tutorial-9-link-2">Tulsa Summer Party Countdown: Implemented setInterval and Math logic to perform real-time millisecond-to-unit conversions for a holiday countdown.</a></li>
+                    <li><a href="MODULE 11/tutorial/tny_clock.html" data-i18n="tutorial-9-link-3">Tulsa New Year's Bash: Engineered a self-correcting target date calculation to ensure countdowns always display future events.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial10">
-                <h2 id="tutorial10">
-                    <span class="lang-en">Tutorial 10 — Exploring Arrays, Loops & Conditionals</span>
-                    <span class="lang-es">Tutorial 10 — Explorando Arrays, Bucles y Condicionales</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Arrays, loops, conditionals, calendar logic.</span>
-                    <span class="lang-es">Arrays, bucles, condicionales, lógica de calendario.</span>
-                </p>
+            <!-- Tutorial 10: Exploring Arrays, Loops, and Conditionals -->
+            <section class="box">
+                <h2 data-i18n="tutorial-10-heading">Tutorial 10: Exploring Arrays, Loops, and Conditionals</h2>
                 <ul role="list">
-                    <li><a href="MODULE 10/tutorial/cp_royal.html">
-                        <span class="lang-en">Tutorial: Arrays & Data Handling</span>
-                        <span class="lang-es">Tutorial: Arrays y Manejo de Datos</span>
-                    </a></li>
-                    <li><a href="MODULE 10/review/cp_astaire.html">
-                        <span class="lang-en">Review: Loops & Conditional Logic</span>
-                        <span class="lang-es">Repaso: Bucles y Lógica Condicional</span>
-                    </a></li>
-                    <li><a href="MODULE 10/case2/paa_game.html">
-                        <span class="lang-en">Case: Dynamic Calendar & Event Display</span>
-                        <span class="lang-es">Caso: Calendario Dinámico y Visualización de Eventos</span>
-                    </a></li>
+                    <li><a href="MODULE 12/case2/vw_election.html" data-i18n="tutorial-10-link-1">VoterWeb Election Results: Processed multidimensional arrays of candidate data to generate interactive tables with visual percentage bars.</a></li>
+                    <li><a href="MODULE 12/review/lht_events.html" data-i18n="tutorial-10-link-2">Lyman Hall Theater Event Listings: Created a 14-day time window for event filtering by performing millisecond arithmetic on current Date objects.</a></li>
+                    <li><a href="MODULE 12/tutorial/lht_sept.html" data-i18n="tutorial-10-link-3">Lyman Hall Interactive Calendar: Built a modular function architecture to dynamically generate monthly calendar grids, including leap year logic.</a></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial11">
-                <h2 id="tutorial11">
-                    <span class="lang-en">Tutorial 11 — Advanced Layouts & Events</span>
-                    <span class="lang-es">Tutorial 11 — Diseños Avanzados y Eventos</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Event-driven layout, responsive event listings, multi-page academic layout.</span>
-                    <span class="lang-es">Diseño basado en eventos, listados adaptables, diseño académico.</span>
-                </p>
+            <!-- Final Project -->
+            <section class="box">
+                <h2 data-i18n="capstone-heading">Capstone Project: Tienda Salvadoreña</h2>
+                <p><strong data-i18n="capstone-subtitle">A Bilingual E-Commerce Website for Denver's Oldest Salvadoran Store</strong></p>
+                <p data-i18n="capstone-intro">This capstone project synthesizes all techniques learned throughout CIS 3030 to create a culturally authentic digital storefront.</p>
                 <ul role="list">
-                    <li><a href="MODULE 11/tutorial/tny_clock.html">
-                        <span class="lang-en">Tutorial: Event‑Driven Page Layout</span>
-                        <span class="lang-es">Tutorial: Diseño de Página Basado en Eventos</span>
-                    </a></li>
-                    <li><a href="MODULE 11/review/tny_july.html">
-                        <span class="lang-en">Review: Responsive Event Listings</span>
-                        <span class="lang-es">Repaso: Listados de Eventos Adaptables</span>
-                    </a></li>
-                    <li><a href="MODULE 11/case1/bc_union.html">
-                        <span class="lang-en">Case: Multi‑Page Academic Layout</span>
-                        <span class="lang-es">Caso: Diseño Académico de Varias Páginas</span>
-                    </a></li>
+                    <li><a href="https://dquint32.github.io/finalproject/" target="_blank" rel="noopener noreferrer" data-i18n="capstone-link">Visit Tienda Salvadoreña Website</a></li>
+                </ul>
+                <ul>
+                    <li><strong data-i18n="capstone-feature-1">Bilingual Translation System:</strong> <span data-i18n="capstone-feature-1-desc">Custom lang-toggle.js with 200+ key-value pairs and localStorage persistence.</span></li>
+                    <li><strong data-i18n="capstone-feature-2">Sophisticated Design Tokens:</strong> <span data-i18n="capstone-feature-2-desc">Utilizes CSS variables for a national color palette and clamp() for fluid typography.</span></li>
+                    <li><strong data-i18n="capstone-feature-3">Advanced Layouts:</strong> <span data-i18n="capstone-feature-3-desc">Combines CSS Grid galleries with nested Flexbox containers for responsive card scaling.</span></li>
+                    <li><strong data-i18n="capstone-feature-4">Interactive UI:</strong> <span data-i18n="capstone-feature-4-desc">Features a JavaScript-driven product category filter and a custom image zoom modal system.</span></li>
+                    <li><strong data-i18n="capstone-feature-5">Accessibility &amp; Standards:</strong> <span data-i18n="capstone-feature-5-desc">Achieved WCAG 2.1 Level AA compliance through ARIA landmarks, touch-target optimization, and reduced motion support.</span></li>
                 </ul>
             </section>
 
-            <section class="box" aria-labelledby="tutorial12">
-                <h2 id="tutorial12">
-                    <span class="lang-en">Tutorial 12 — Advanced Multimedia & Interactivity</span>
-                    <span class="lang-es">Tutorial 12 — Multimedia Avanzada e Interactividad</span>
-                </h2>
-                <p>
-                    <strong><span class="lang-en">Focus:</span><span class="lang-es">Enfoque:</span></strong> 
-                    <span class="lang-en">Media scheduling, event-driven multimedia, interactive voting interface.</span>
-                    <span class="lang-es">Programación de medios, multimedia basada en eventos, interfaz de votación.</span>
-                </p>
-                <ul role="list">
-                    <li><a href="MODULE 12/tutorial/Iht_sept.html">
-                        <span class="lang-en">Tutorial: Media Scheduling & Layout</span>
-                        <span class="lang-es">Tutorial: Programación de Medios y Diseño</span>
-                    </a></li>
-                    <li><a href="MODULE 12/review/Iht_events.html">
-                        <span class="lang-en">Review: Event‑Driven Multimedia Techniques</span>
-                        <span class="lang-es">Repaso: Técnicas de Multimedia Basada en Eventos</span>
-                    </a></li>
-                    <li><a href="MODULE 12/case2/vw_election.html">
-                        <span class="lang-en">Case: Interactive Voting Interface</span>
-                        <span class="lang-es">Caso: Interfaz de Votación Interactiva</span>
-                    </a></li>
-                </ul>
+            <!-- Textbook Citation -->
+            <section class="box citation-section">
+                <h2 data-i18n="textbook-heading">Textbook Reference</h2>
+                <p data-i18n="textbook-citation">Carey, Patrick M. <em>New Perspectives on HTML5 and CSS: Comprehensive</em>, 8th Edition. Cengage Learning, 2020.</p>
             </section>
 
-            <section class="box" aria-labelledby="finalproject">
-                <h2 id="finalproject">
-                    <span class="lang-en">Final Project — Tienda Salvadoreña</span>
-                    <span class="lang-es">Proyecto Final — Tienda Salvadoreña</span>
-                </h2>
-                <div class="lang-en">
-                    <p>A bilingual, multi‑page website demonstrating semantic HTML, responsive CSS, grid/flex layouts, multimedia, JavaScript enhancements, accessibility, and cultural branding & UX.</p>
-                </div>
-                <div class="lang-es">
-                    <p>Un sitio web bilingüe y de varias páginas que demuestra HTML semántico, CSS adaptable, diseños grid/flex, multimedia, mejoras de JavaScript, accesibilidad y marca cultural y experiencia de usuario.</p>
-                </div>
-                <ul role="list">
-                    <li><a href="https://dquint32.github.io/finalproject/" target="_blank" rel="noopener noreferrer">
-                        <span class="lang-en">View Final Project: Tienda Salvadoreña</span>
-                        <span class="lang-es">Ver Proyecto Final: Tienda Salvadoreña</span>
-                    </a></li>
-                </ul>
-            </section>
-
-            <section class="box citation-section" aria-labelledby="textbook">
-                <h2 id="textbook">
-                    <span class="lang-en">Textbook Reference</span>
-                    <span class="lang-es">Referencia del Libro de Texto</span>
-                </h2>
-                <p>Carey, Patrick M. <em>New Perspectives on HTML5 and CSS: Comprehensive</em>, 8th Edition. Cengage Learning, 2020.</p>
+            <!-- Disclaimer -->
+            <section class="box citation-section">
+                <h2 data-i18n="disclaimer-heading">Disclaimer</h2>
+                <p data-i18n="disclaimer-text">This website was created in partial fulfillment of my CIS 3030 course requirements. All content is for academic demonstration purposes.</p>
             </section>
         </main>
 
+        <!-- Footer -->
         <footer class="box" role="contentinfo">
             <p class="signature">
-                <span class="lang-en">Created by David Quintana &copy; 2025</span>
-                <span class="lang-es">Creado por David Quintana &copy; 2025</span>
-            </p>
+  &copy; 2026 Servicios Quintana LLC. All rights reserved.
+</p>
         </footer>
     </div>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
